@@ -1,0 +1,139 @@
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.timer {
+    font-size: 4vw;
+    text-align: center;
+    margin-bottom: 5vh;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.controls {
+    text-align: center;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2vw;
+    color: black;
+    margin: 0 10px;
+}
+
+.help-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 2vw;
+    z-index: 999;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    font-size: 1.5vw;
+}
+
+.help-content {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 2vw;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: white;
+    z-index: 999;
+    font-size: 18px;
+    color: black;
+}
+a {
+  color: black;
+}
+@media only screen and (max-width: 768px) {
+    .timer {
+        font-size: 10vw;
+    }
+
+    button {
+        font-size: 5vw;
+    }
+
+    .help-box {
+        padding: 5vw;
+        font-size: 3vw;
+    }
+
+    .close-btn {
+        font-size: 4vw;
+    }
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .container {
+    border-color: white;
+}
+
+.dark-mode .timer {
+    color: white;
+}
+
+.dark-mode .controls button {
+    color: white;
+}
+
+.dark-mode .help-box {
+    background-color: black;
+    color: white;
+    border-color: white;
+    border: 2px solid white;
+}
+
+.dark-mode .close-btn {
+    color: white;
+}
+.dark-mode .theme-toggle {
+  background-color: black;
+  color: white;
+  border: 2px solid white
+}
+body.dark-mode a {
+    color: white;
+}

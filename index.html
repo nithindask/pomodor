@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodor | Pomodoro timer</title>
+    <link href="icon.png" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+
+<div class="help-box" id="help-box">
+    <div class="help-content">
+        <span class="close-btn" onclick="closeHelp()">×</span><br>
+        <h2>How to use</h2><br><hr>
+        <p><ul>
+          <li>Press the play button to start the timer.</li><br>
+          <li>Press the pause button to pause the timer.</li><br>
+          <li>Swipe up on the timer or press the up arrow key while the timer is running to add 1 minute to the timer.</li><br>
+          <li>Swipe down on the timer or press the down arrow key while the timer is running to reset the timer.</li><br>
+          <li>© All rights reserved to <a href="https://instagram.com/_nithin.das">nithindas</a></li>
+        </ul></p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="timer" id="timer">25:00</div>
+    <div class="controls">
+        <button onclick="toggleTimer()">
+            <i class="fas fa-play" id="play-icon"></i>
+            <i class="fas fa-pause" id="pause-icon" style="display: none;"></i>
+        </button>
+    </div>
+</div>
+
+<div class="theme-toggle" onclick="toggleTheme()"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
