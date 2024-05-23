@@ -1,5 +1,5 @@
 let timer;
-let timeLeft = 1500; // 25 minutes
+let timeLeft = 1500;
 let isRunning = false;
 let swipeStartY = 0;
 
@@ -32,9 +32,9 @@ function updateTimer() {
         displayTime();
     } else {
         clearInterval(timer);
-        timeLeft = 300; // 5 minutes
+        timeLeft = 300;
         displayTime();
-        setTimeout(startShortBreak, 1000); // Start the 5-minute break
+        setTimeout(startShortBreak, 1000);
     }
 }
 
@@ -48,9 +48,9 @@ function updateShortBreak() {
         displayTime();
     } else {
         clearInterval(timer);
-        timeLeft = 1500; // Reset to 25 minutes for the next session
+        timeLeft = 1500;
         displayTime();
-        toggleTimer(); // Start the next session
+        toggleTimer();
     }
 }
 
@@ -81,10 +81,10 @@ document.addEventListener('keydown', function(event) {
         } else if (event.key === "ArrowDown") {
             clearInterval(timer);
             isRunning = false;
-            timeLeft = 1500; // Reset to 25 minutes
+            timeLeft = 1500;
             displayTime();
-            document.getElementById('play-icon').style.display = 'inline'; // Show play icon
-            document.getElementById('pause-icon').style.display = 'none'; // Hide pause icon
+            document.getElementById('play-icon').style.display = 'inline';
+            document.getElementById('pause-icon').style.display = 'none';
         }
     }
 });
@@ -97,15 +97,15 @@ document.addEventListener('touchend', function(event) {
     let swipeEndY = event.changedTouches[0].clientY;
     let swipeYDiff = swipeEndY - swipeStartY;
 
-    if (swipeYDiff > 50) { // Swiped down
+    if (swipeYDiff > 50) {
         clearInterval(timer);
         isRunning = false;
-        timeLeft = 1500; // Reset to 25 minutes
+        timeLeft = 1500;
         displayTime();
-        document.getElementById('play-icon').style.display = 'inline'; // Show play icon
-        document.getElementById('pause-icon').style.display = 'none'; // Hide pause icon
-    } else if (swipeYDiff < -50) { // Swiped up
-        timeLeft += 60; // Add one minute
+        document.getElementById('play-icon').style.display = 'inline';
+        document.getElementById('pause-icon').style.display = 'none';
+    } else if (swipeYDiff < -50) {
+        timeLeft += 60;
         displayTime();
     }
 }, false);
@@ -114,11 +114,10 @@ function toggleTheme() {
     const body = document.body;
     body.classList.toggle('dark-mode');
 
-    // Update theme toggle button icon
     const themeToggle = document.querySelector('.theme-toggle');
     if (body.classList.contains('dark-mode')) {
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>'; // Moon icon for dark mode
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     } else {
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Sun icon for light mode
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
 }
