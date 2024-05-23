@@ -80,9 +80,11 @@ button {
     font-size: 18px;
     color: black;
 }
+
 a {
   color: black;
 }
+
 @media only screen and (max-width: 768px) {
     .timer {
         font-size: 10vw;
@@ -129,11 +131,13 @@ body.dark-mode {
 .dark-mode .close-btn {
     color: white;
 }
+
 .dark-mode .theme-toggle {
   background-color: black;
   color: white;
   border: 2px solid white
 }
+
 body.dark-mode a {
     color: white;
 }
